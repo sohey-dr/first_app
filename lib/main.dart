@@ -18,8 +18,11 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutterで遊んでみる'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text('次へ'),
+          ),
         ),
       ),
     );
