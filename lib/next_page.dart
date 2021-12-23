@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NextPage extends StatelessWidget {
-  const NextPage({Key? key}) : super(key: key);
-
+  final String name;
+  const NextPage(this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,7 @@ class NextPage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.red,
+        child: Text(name),
       ),
     );
   }
