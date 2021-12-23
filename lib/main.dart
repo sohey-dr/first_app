@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'next_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,18 +16,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutterで遊んでみる'),
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text('次へ'),
-          ),
+      home: Home()
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutterで遊んでみる'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const NextPage()),
+            );
+          },
+          child: const Text('次へ'),
         ),
       ),
     );
   }
 }
-
