@@ -35,7 +35,10 @@ class Home extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const NextPage()),
+              MaterialPageRoute(
+              builder: (context) {
+                  return const NextPage('画面遷移で値を飛ばしたよ');
+                }),
             );
           },
           child: const Text('次へ'),
