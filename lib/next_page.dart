@@ -8,7 +8,7 @@ class NextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('KBOYのFlutter大学'),
+        title: const Text('画面遷移先'),
       ),
       body: Container(
         color: Colors.red,
